@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Blog</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Shizuru&family=Short+Stack&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap');
+        </style>
+        <link rel="stylesheet" href="/static/socialnetwork/global.css" />
+        <script src="/static/socialnetwork/global.js" type="text/javascript"></script>
+    </head>
+    <div class="colorhead">
+    <div id="id_header_div" class="header">
+        <div id="id_site_name" class="site_name">BLOG !</div>
+        <table class="links">
+            <tr>
+                <th><a id="id_nav_profile" href="{% url 'profile' %}" class="prof">{{user.first_name}} {{user.last_name}}</a></th>
+            </tr>
+            <tr>
+                <th><a id="id_nav_global_stream" href="{% url 'global' %}" class="g">global</a></th>
+                <th><a id="id_nav_follower_stream" href="{% url 'follower' %}" class="f">follower</a></th>
+                <th><a id="id_nav_logout" href="{% url 'logout' %}" class="l">logout</a></th>
+            </tr>
+        </table>
+    </div>
+    </div>
+    <div id="id_page_name" class="global">
+        <h1>
+        Global Stream
+        </h1>
+    </div>
+    <form action = "{% url 'new-post' %}" class="new-post" method="POST">
+    <table class="newpost">
+        <tr>
+            <th><label for="id_post_input_text">New Post:</label></th>
+            <th><input type="text" name="text" id="id_post_input_text"> </th>
+            <th><button type="submit" id="id_post_button" class="submitpost">submit</button></th>
+        </tr>
+        <tr>
+            <script></script>
+            <span id="error" class="error"></span>
+        </tr>
+    </table>
+    {% csrf_token %}
+    </form> 
+   
+   
+    <div id="my-posts-go-here"></div>
+
+    <script>
+        var addCommentURL = function (id) {
+            let s = "{% url 'add-comment-w-id' 0 %}".replace("0", id)
+            return s
+        }
+
+        var otherProfileURL = function (id) {
+            let s =  "{% url 'other' 0 %}".replace("0", id)
+            return s
+        }
+
+        var myUserId = "{{request.user.id}}"
+
+        window.onload = loadPosts;
+        loadPosts();
+        loadPosts();
+        window.setInterval(loadPosts, 5000);
+    </script>
+
+</html>
+
+

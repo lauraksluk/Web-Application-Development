@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Blog</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Shizuru&family=Short+Stack&display=swap');
+        </style>
+        <link rel="stylesheet" href="/static/socialnetwork/profile.css">
+    </head>
+    <div class="colorhead">
+    <div id="id_header_div" class="header">
+        BLOG !
+    <table class="links">
+        <tr>
+            <th><a id="id_nav_profile" href="profile" class="prof">{{user.first_name}} {{user.last_name}}</a></th>
+        </tr>
+        <tr>
+            <th><a id="id_nav_global_stream" href="global" class="g">global</a></th>
+            <th><a id="id_nav_follower_stream" href="follower" class="f">follower</a></th>
+            <th><a id="id_nav_logout" href="logout" class="l">logout</a></th>
+        </tr>
+    </table>
+    </div></div>
+    <div id="id_page_name" class="profilename">
+        <h1>
+        Profile Page for {{user.first_name}} {{user.last_name}}
+        </h1>
+    </div>
+    {% load static %}
+    <img id="id_user_picture" src="{% static 'socialnetwork/dummy.png' %}" alt="propic" class="profpic">
+    
+    <div id="id_bio_input_text" class="biotext" contenteditable="true">
+        {{user.first_name}} is a renowned actress. In the summer {{user.first_name}} enjoys to travel.
+    </div>
+
+    <div class="upload">
+    <form action="/action_page.php">
+        <input type="file" id="id_profile_picture" name="filename">
+        <input type="submit" id="id_update_profile_button">
+    </form></div>
+    <div class="followlist">
+        You are following:
+        <ul>
+            <li><a id="id_profile_link_1" href="">Blair Waldorf</a></li>
+            <li>Nate Archibald</li>
+        </ul>
+    </div>
+    
+</html>

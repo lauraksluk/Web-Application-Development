@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Blog</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Shizuru&family=Short+Stack&display=swap');
+        </style>
+        <link rel="stylesheet" href="/static/socialnetwork/profile.css">
+    </head>
+    <div class="colorhead">
+    <div id="id_header_div" class="header">
+        BLOG !
+    <table class="links">
+        <tr>
+            <th><a id="id_nav_profile" href="profile" class="prof">{{user.first_name}} {{user.last_name}}</a></th>
+        </tr>
+        <tr>
+            <th><a id="id_nav_global_stream" href="global" class="g">global</a></th>
+            <th><a id="id_nav_follower_stream" href="follower" class="f">follower</a></th>
+            <th><a id="id_nav_logout" href="logout" class="l">logout</a></th>
+        </tr>
+    </table>
+    </div></div>
+    <div id="id_page_name" class="profilename">
+        <h1>
+        Profile Page for Blair Waldorf
+        </h1>
+    </div>
+    {% load static %}
+    <img id="id_user_picture" src="{% static 'socialnetwork/blair.jpeg' %}" alt="propic" class="profpic">
+    
+    <div id="id_user_bio" class="biotext">
+        Blair is a socialite from New York City's Upper East Side. Blair loves headbands.
+    </div>
+
+    {% if follow %}
+    <a id="id_follow" href=""><button class="follow">Follow</button></a>
+    {% else %}
+    <a id="id_unfollow" href="">Unfollow</a>
+    {% endif %}
+
+</html>

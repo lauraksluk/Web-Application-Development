@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Blog</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Shizuru&family=Short+Stack&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap');
+        </style>
+        <link rel="stylesheet" href="/static/socialnetwork/global.css" />
+    </head>
+    <div id="id_header_div" class="header">
+        <div id="id_site_name" class="site_name">BLOG !</div>
+        <table class="links">
+            <tr>
+                <th><a id="id_nav_profile" href="profile" class="prof">{{user.first_name}} {{user.last_name}}</a></th>
+            </tr>
+            <tr>
+                <th><a id="id_nav_global_stream" href="global" class="g">global</a></th>
+                <th><a id="id_nav_follower_stream" href="follower" class="f">follower</a></th>
+                <th><a id="id_nav_logout" href="logout" class="l">logout</a></th>
+            </tr>
+        </table>
+    </div>
+    <div id="id_page_name" class="global">
+        <h1>
+        Follower Stream
+        </h1>
+    </div>
+    <div class="fullpost1">
+    <table class="post1">
+        <tr><th> 
+            <div id="id_post_div_1" class="post1">
+                    Post by <a id="id_post_profile_1" href="profile">Blair Waldorf
+                </a>
+                <span id="id_post_text_1">-- Today was the first day at my new job! --</span>
+                <span id="id_post_date_time_1" style="font-style:italic;">01/25/2021 12:10 PM</span>
+            </div>
+        </th></tr>
+    </table>
+    <table class="comment12">
+        <tr><th>
+            <div id="id_comment_div_2" class="comment1">
+                Comment by <a id="id_comment_profile_2" href="profile">
+                    Chuck Bass
+                </a>
+                <span id="id_comment_text_2">-- Congratulations! You've come so far! Love you. --</span>
+                <span id="id_comment_date_time_2" style="font-style:italic;">01/25/2021 3:02 PM</span>
+            </div>
+            </th></tr>
+        <tr><th>
+            <div id="id_comment_div_1" class="comment2">
+                Comment by <a id="id_comment_profile_1" href="profile">
+                    Nate Archibald
+                </a>
+                <span id="id_comment_text_1">-- What a great way to ring in the new year! --</span>
+                <span id="id_comment_date_time_1" style="font-style:italic;">01/25/2021 6:29 PM</span>
+            </div>
+        </th></tr>
+        <tr>
+            <th><label for="id_comment_input_text1">New Comment:</label>
+            <input type="text" name="new" id="id_comment_input_text1"> 
+            <button type="submit" id="id_comment_button1" class="submit">submit</button>
+        </th></tr>
+    </table>
+    </div>
+    <div class="fullpost1">
+    <table class="post1">
+        <tr><th> 
+            <div id="id_post_div_2" class="post2">
+                    Post by <a id="id_post_profile_2" href="profile">Serena Van der Woodsen
+                </a>
+                <span id="id_post_text_2">-- Haven't heard from Gossip Girl in so long. Kind of miss high school. --</span>
+                <span id="id_post_date_time_2" style="font-style:italic;">01/24/2021 9:28 AM</span>
+            </div>
+        </th></tr>
+    </table>
+    <table class="comment12">
+        <tr>
+            <th><label for="id_comment_input_text2">New Comment:</label>
+            <input type="text" name="new" id="id_comment_input_text2"> 
+            <button type="submit" id="id_comment_button2" class="submit">submit</button>
+        </th></tr>
+    </table>
+    </div>
+</html>

@@ -1,0 +1,71 @@
+.header{
+    color: rgb(254, 93, 38);
+    margin: 0px;
+    padding: 15px;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 60px;
+    text-align: left;
+    width: 100vw;
+    background-color: rgb(81, 187, 113);
+    border-style: solid;
+    border-color: rgb(90, 177, 112);
+    -webkit-text-stroke: 4px black;
+}
+
+body { margin:0px; }
+
+a:link{
+    color:black;
+    font-size: 20px;
+    text-align: right;
+    text-decoration: none;
+    font-family: 'Short Stack', cursive;
+    font-weight: bold;
+    padding-right: 30px;
+    font-weight: 100;
+}
+
+.login{
+    font-size: 15px;
+    color: aliceblue;
+    text-align: right;
+}
+
+a:visited {
+    color:black;
+    text-decoration: none;
+    font-family: 'Short Stack', cursive;
+    padding-right: 30px;
+    font-weight: 100;
+}
+
+
+.register{
+    padding-top: 20px;
+    text-align: center;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 30px;
+    padding-bottom: 35px;
+}
+
+.button{
+    text-align: center;
+    padding-top: 20px;
+    margin:0 auto;
+    display: block;
+}
+
+.submit{
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 18px;
+    color:rgb(75, 84, 92);
+}
+
+
+.tbl {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: lighter;
+}

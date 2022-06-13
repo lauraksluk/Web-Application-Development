@@ -1,0 +1,101 @@
+.header{
+    color: rgb(254, 93, 38);
+    margin: 0px;
+    padding-top: 15px;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 60px;
+    text-align: left;
+    width: 100vw;
+    height: 120px;
+    background-color: rgb(81, 187, 113);
+    border-style: solid;
+    border-color: rgb(90, 177, 112);
+    -webkit-text-stroke: 4px black;
+}
+
+.colorhead {
+    background-color: rgb(81, 187, 113);
+    border-style: solid;
+    border-color: rgb(90, 177, 112);
+}
+
+body { margin:0px; }
+
+.fullpost1{
+    padding-top: 10px;
+}
+
+.comment1, .comment2 {
+    border: 3px solid rgb(161, 159, 159);
+    border-radius: 10px;
+}
+
+table.comment12 {
+   width: 50vw;
+   margin-left: 30vw; 
+   font-size: 18px;
+   font-family: 'Josefin Sans', sans-serif;
+}
+
+table.post1 {
+    width: 60vw;
+    height: 10px;
+    margin-left: 20vw;
+    font-family: 'Josefin Sans', sans-serif;
+    border: 3px solid black;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+table.links {
+    margin-left: 70vw;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 15px;
+    text-align: right;
+}
+
+table.newpost{
+    text-align: center;
+    margin-left: 30vw;
+    padding-bottom: 20px;
+    font-size: 18px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+a.g:link, a.f:link, a.l:link {
+    font-family: 'Short Stack', cursive;
+    color:black;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 70;
+}
+
+a.prof:link {
+    color:aliceblue;
+    font-family: 'Short Stack', cursive;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 80;
+}
+
+a.prof:visited{
+    font-family: 'Short Stack', cursive;
+    color:aliceblue;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 80;
+}
+
+a.g:visited, a.f:visited, a.l:visited {
+    font-family: 'Short Stack', cursive;
+    color:black;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 80;
+}
+
+.global{ 
+    text-align: center;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 30px;
+}

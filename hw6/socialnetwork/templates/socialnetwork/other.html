@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Blog</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Shizuru&family=Short+Stack&display=swap');
+        </style>
+        <link rel="stylesheet" href="/static/socialnetwork/profile.css">
+    </head>
+    <div class="colorhead">
+    <div id="id_header_div" class="header">
+        BLOG !
+    <table class="links">
+        <tr>
+            <th><a id="id_nav_profile" href="{% url 'profile' %}" class="prof">{{user.first_name}} {{user.last_name}}</a></th>
+        </tr>
+        <tr>
+            <th><a id="id_nav_global_stream" href="{% url 'global' %}" class="g">global</a></th>
+            <th><a id="id_nav_follower_stream" href="{% url 'follower' %}" class="f">follower</a></th>
+            <th><a id="id_nav_logout" href="{% url 'logout' %}" class="l">logout</a></th>
+        </tr>
+    </table>
+    </div></div>
+    <div id="id_page_name" class="profilename">
+        <h2>
+        Profile Page for {{profile.user.first_name}} {{profile.user.last_name}}
+        </h2>
+    </div>
+
+    {% if not profile.picture %}
+    {% load static %}
+    <img id="id_user_picture" src="{% static 'socialnetwork/dummy.png' %}" width="200px" alt="propic" class="profpic">
+    {% else %}
+    <img id="id_user_picture" src="{% url 'photo' profile.user.id %}" width="200px" class="profpic">
+    {% endif %}
+
+    <div id="id_user_bio" class="biotext">
+        {{profile.bio}}
+    </div>
+
+    {% if profile.user in request.user.profile.following.all %}
+    <form action="{% url 'unfollow' profile.user.id %}" method="POST">
+        <button id="id_unfollow" class="follow">Unfollow</button>
+        {% csrf_token %}
+    </form>
+    {% else %}
+    <form action="{% url 'follow' profile.user.id %}" method="POST">
+        <button id="id_follow" class="follow">Follow</button>
+        {% csrf_token %}
+    </form>
+    {% endif %}
+
+</html>

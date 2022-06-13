@@ -1,0 +1,96 @@
+.header{
+    color: rgb(254, 93, 38);
+    background-color: rgb(81, 187, 113);
+    margin: 0px;
+    padding: 15px;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 60px;
+    text-align: left;
+    width: 100vw;
+    -webkit-text-stroke: 4px black;
+}
+
+.colorhead {
+    background-color: rgb(81, 187, 113);
+    border-style: solid;
+    border-color: rgb(90, 177, 112);
+}
+
+.followlist{
+    margin-top: 20px;
+    margin-left: 30vw;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+.biotext{
+    padding: 5px;
+    width: 50vw;
+    border: black;
+    font-family: 'Luckiest Guy', cursive;
+    margin-left: 25vw;
+    border: 2px solid black;
+    border-radius: 6px;
+}
+
+.upload{
+    margin-top: 20px;
+    margin-left: 35vw;
+}
+
+.profpic{
+    width:270px;
+    height:200px;
+    margin-left: 35vw;
+    padding-bottom: 10px;
+}
+
+.profilename {
+    text-align: center;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 30px;
+}
+
+body { margin:0px; }
+
+table.links {
+    margin-left: 70vw;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 15px;
+    text-align: right;
+}
+
+table.newpost{
+    text-align: center;
+    margin-left: 30vw;
+}
+
+a.g:link, a.f:link, a.l:link {
+    font-family: 'Short Stack', cursive;
+    color:black;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 70;
+}
+
+a.prof:link {
+    color:aliceblue;
+    font-family: 'Short Stack', cursive;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 80;
+}
+
+
+a.g:visited, a.f:visited, a.l:visited {
+    font-family: 'Short Stack', cursive;
+    color:black;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 80;
+}
+
+.follow {
+    font-family: 'Luckiest Guy', cursive;
+    margin-top: 20px;
+    margin-left: 45vw;
+}

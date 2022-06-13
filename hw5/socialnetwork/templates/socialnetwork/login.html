@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Blog</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Shizuru&family=Short+Stack&display=swap');
+        </style>
+        <link rel="stylesheet" href="/static/socialnetwork/login.css">
+    </head>
+    <body>
+    <div id="id_header_div" class="header">
+        BLOG !
+        <div class="register">
+            <a id="id_register_link" href="register">r e g i s t e r</a>
+        </div>
+    </div>
+    <div id="id_page_name" class="login">
+        <h1>
+        Login
+        </h1>
+    </div>
+    <form method="post">
+        <table class="tb" style="font-size: 18px;">
+            {{form}}
+        </table>
+        {% csrf_token %}
+        <div class="button">
+            <button type="submit" id="id_login_button" class="submit">
+                submit
+            </button>
+        </div>
+    </form>
+    </body>
+
+</html>

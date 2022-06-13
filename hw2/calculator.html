@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>RPN Calculator</title>
+        <link rel="stylesheet" href="css/calculator.css">
+        <script src="js/calculator.js"> </script>
+    </head>
+    
+    <body onload="init()">
+        <div class="output" id="output">
+            0
+        </div>
+        <table>
+            <tr><td><button id="key-7" onclick="clickDigit('7')">7</button></td>
+                <td><button id="key-8" onclick="clickDigit('8')">8</button></td>
+                <td><button id="key-9" onclick="clickDigit('9')">9</button></td>
+                <td><button class = "op" id="key-plus" onclick="clickPlus()">&plus;</button></td></tr>
+            <tr><td><button id="key-4" onclick="clickDigit('4')">4</button></td>
+                <td><button id="key-5" onclick="clickDigit('5')">5</button></td>
+                <td><button id="key-6" onclick="clickDigit('6')">6</button></td>
+                <td><button class = "op" id="key-minus" onclick="clickMinus()">&minus;</button></td></tr>
+            <tr><td><button id="key-1" onclick="clickDigit('1')">1</button></td>
+                <td><button id="key-2" onclick="clickDigit('2')">2</button></td>
+                <td><button id="key-3" onclick="clickDigit('3')">3</button></td>
+                <td><button class = "op" id="key-times" onclick="clickTimes()">&times;</button></td></tr>
+            <tr><td></td>
+                <td><button id="key-0" onclick="clickDigit('0')">0</button></td>
+                <td><button class = "op" onclick="clickPush()" id="key-push">&uarr;</button></td>
+                <td><button class = "op" id="key-divide" onclick="clickDivide()">&divide;</button></td></tr>
+        </table>
+    </body>

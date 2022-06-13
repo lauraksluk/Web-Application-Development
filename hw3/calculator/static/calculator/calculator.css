@@ -1,0 +1,60 @@
+div {
+    background-color: rgb(191, 211, 193);
+    border-radius: 8px;
+    width: 300px;
+    padding: 20px;
+    margin: 3px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(162, 201, 165);
+}
+
+.output {
+    background-color: rgb(191, 211, 193);
+    color:rgb(5, 5, 5);
+    text-align: right;
+    font-size: 34px;
+    font-family:sans-serif;
+}
+
+div.other {
+    background-color: rgb(240, 213, 184);
+    color:rgb(5, 5, 5);
+    text-align: right;
+    font-size: 34px;
+    font-family:sans-serif;
+}
+
+table {
+    width: 300px;
+    border-spacing: 15px;
+    padding: 20px;
+}
+
+button {
+    background-color: rgb(255, 229, 212);
+    border: 2px solid rgb(255, 229, 212);
+    transition-duration: 0.4s;
+    width: 65px;
+    padding: 16px;
+    border-radius: 26px;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.op {
+    background-color: rgb(208, 93, 78);
+    color:aliceblue;
+    border: 2px solid rgb(208, 93, 78);
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: aliceblue;
+    color: rgb(5, 5, 5);
+}
+.op:hover {
+    background-color: aliceblue;
+    color:rgb(5, 5, 5);
+}

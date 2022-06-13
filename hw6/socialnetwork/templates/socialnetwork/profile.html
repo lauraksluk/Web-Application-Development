@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Blog</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Shizuru&family=Short+Stack&display=swap');
+        </style>
+        <link rel="stylesheet" href="/static/socialnetwork/profile.css">
+    </head>
+    <div class="colorhead">
+    <div id="id_header_div" class="header">
+        BLOG !
+    <table class="links">
+        <tr>
+            <th><a id="id_nav_profile" href="{% url 'profile' %}" class="prof">{{user.first_name}} {{user.last_name}}</a></th>
+        </tr>
+        <tr>
+            <th><a id="id_nav_global_stream" href="{% url 'global' %}" class="g">global</a></th>
+            <th><a id="id_nav_follower_stream" href="{% url 'follower' %}" class="f">follower</a></th>
+            <th><a id="id_nav_logout" href="{% url 'logout' %}" class="l">logout</a></th>
+        </tr>
+    </table>
+    </div></div>
+    <div id="id_page_name" class="profilename">
+        <h2>
+        Profile Page for {{profile.user.first_name}} {{profile.user.last_name}}
+        </h2>
+    </div>
+
+    {% if not profile.picture %}
+    {% load static %}
+    <img id="id_user_picture" src="{% static 'socialnetwork/dummy.png' %}" width= "200px" alt="propic" class="profpic">
+    {% else %}
+    <img id="id_user_picture" src="{% url 'photo' profile.user.id %}" width="200px" class="profpic">
+    {% endif %}
+
+    <form action="{% url 'profile' %}" method="POST" enctype="multipart/form-data">
+        <table class="profiletable">
+            {{form}}
+        </table>
+        {% csrf_token %}
+        <div class="submitbutton">
+            <button id="id_update_profile_button">Submit</button>
+        </div>
+    </form>
+
+    <div class="followlist">
+        You are following:
+        <ul>
+            {% for person in profile.following.all %}
+            <li>
+                <a href="{% url 'other' person.id %}" id="id_profile_link_{{person}}">
+                    {{person.first_name}} {{person.last_name}}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+</html>
